@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey | Online Shopping Attitudes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+</head>
+  
+<body>
+  <header>
+    <h1>Survey</h1>
+    <h2>Online Shopping Attitudes</h2>
+  </header>
+  
+  <section>
+    <img id="left-image" src="https://i.ibb.co/4P1k9RH/left.png" alt="">
+   
+     <div class="survey-box">
+        <form class="form">
+          
+          <div class="input-div">
+            <input type="text" name="name" id="name" autocomplete="off" placeholder="Name" maxLength="65" required />
+            <label for="name" class="input-label">
+              <span class="content">Name</span>
+            </label>
+          </div>
+          
+          <div class="input-div">
+            <input type="email" name="email" id="email" autocomplete="off" placeholder="Email" maxLength="65" required />
+            <label for="email" class="input-label">
+              <span class="content">Email</span>
+            </label>
+          </div>
+          
+          <div class="age-div">
+            <select name="age" id='dropdown' required>
+              <option value="" disabled selected>Age</option>
+              <option value="UNDER 12">UNDER 12</option>
+              <option value="12-15">12-15</option>
+              <option value="16-40">16-40</option>
+              <option value="40-60">40-60</option>
+              <option value="60+">60+</option>
+            </select>
+            <span class="age-span">Age</span>
+          </div>
+          
+           <div class="radio-frequency-div">
+             <input
+                id="Extremely-often"
+                name="payment-frequency"
+                value="Extremely-often"
+                type="radio"
+                class="input-radio-frequency"
+                    required
+              /><label 
+                for="Extremely-often"
+                >Extremely often</label
+               ><br>
+             <input
+                id="Quite-often"
+                name="payment-frequency"
+                value="Quite-often"
+                type="radio"
+                class="input-radio-frequency"
+              /><label 
+                for="Quite-often"
+                >Quite often</label
+               ><br>
+             <input
+                id="Moderately-often"
+                name="payment-frequency"
+                value="Moderately-often"
+                type="radio"
+                class="input-radio-frequency"
+              /><label 
+                for="Moderately-often"
+                >Moderately often</label
+               ><br>
+             <input
+                id="Slightly-often"
+                name="payment-frequency"
+                value="Slightly-often"
+                type="radio"
+                class="input-radio-frequency"
+              /><label 
+                for="Slightly-often"
+                >Slightly often</label
+               ><br>
+             <input
+                id="Not-at-all-often"
+                name="payment-frequency"
+                value="Not-at-all-often"
+                type="radio"
+                class="input-radio-frequency"
+              /><label 
+                for="Not-at-all-often"
+                >Not at all often</label
+               >
+             <span>How often do you buy products online?</span>
+          </div>
+          
+          <div class="textarea-div">
+            <textarea id="products" name="products" cols="70" rows="2" maxLength="153" onkeydown="return limitLines(this, event)" required></textarea>
+            <label id="products-label" for="products" class="textarea-label"><span id="products-span" class="content">What types of products do you typically buy online?</span></label>
+            <p id="products-p"></p> 
+          </div>
+          
+          <div class="checkbox-div">
+           <input
+                id="Google-Checkout"
+                name="payment-method"
+                value="Google-Checkout"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="Google-Checkout"
+                >Google Checkout</label
+               ><br>
+            <input
+                id="WebMoney"
+                name="payment-method"
+                value="WebMoney"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="WebMoney"
+                >WebMoney</label
+               ><br>
+             <input
+                id="Credit-card"
+                name="payment-method"
+                value="Credit-card"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="Credit-card"
+                >Credit card</label
+               ><br>
+             <input
+                id="Debit-card"
+                name="payment-method"
+                value="Debit-card"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="Debit-card"
+                >Debit card</label
+               ><br>
+             <input
+                id="Litecoin"
+                name="payment-method"
+                value="Litecoin"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="Litecoin"
+                >Litecoin</label
+               ><br>
+             <input
+                id="PayPal"
+                name="payment-method"
+                value="PayPal"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="PayPal"
+                >PayPal</label
+               ><br>
+             <input
+                id="Bitcoin"
+                name="payment-method"
+                value="Bitcoin"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="Bitcoin"
+                >Bitcoin</label
+               ><br>
+             <input
+                id="Alipay"
+                name="payment-method"
+                value="Alipay"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="Alipay"
+                >Alipay</label
+               ><br>
+             <input
+                id="QIWI"
+                name="payment-method"
+                value="QIWI"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="QIWI"
+                >QIWI</label
+               ><br>
+             <input
+                id="Other"
+                name="payment-method"
+                value="Other"
+                type="checkbox"
+                class="input-checkbox"
+              /><label 
+                for="Other"
+                >Other</label
+               >
+            <span>Which payment method(s) do you use when beying products online?</span>
+          </div>
+          
+          <div class="radio-security-div" required>
+             <input
+                id="Extremely"
+                name="info-security"
+                value="Extremely-confident"
+                type="radio"
+                class="input-radio-security"
+                required
+              /><label 
+                for="Extremely"
+                >Extremely confident</label
+               ><br>
+             <input
+                id="Quite"
+                name="info-security"
+                value="Quite-confident"
+                type="radio"
+                class="input-radio-security"
+              /><label 
+                for="Quite"
+                >Quite confident</label
+               ><br>
+             <input
+                id="Moderately"
+                name="info-security"
+                value="Moderately-confident"
+                type="radio"
+                class="input-radio-security"
+              /><label 
+                for="Moderately"
+                >Moderately confident</label
+               ><br>
+             <input
+                id="Slightly"
+                name="info-security"
+                value="Slightly-confident"
+                type="radio"
+                class="input-radio-security"
+              /><label 
+                for="Slightly"
+                >Slightly confident</label
+               ><br>
+             <input
+                id="Not-at-all"
+                name="info-security"
+                value="Not-at-all-confident"
+                type="radio"
+                class="input-radio-security"
+              /><label 
+                for="Not-at-all"
+                >Not at all confident</label
+               >
+            <span>How confident are you that your payment information is kept secure when buying products online?</span>
+          </div>
+
+          <div class="textarea-div">
+            <textarea id="comments" placeholder="placeholder" maxLength="153" name="comment" cols="70" rows="2" onkeydown="return limitLines(this, event)"></textarea>
+            <label id="comments-label" for="comments" class="textarea-label"><span id="comments-span" class="content">Additional comments</span></label>
+            <p id="comments-p"></p> 
+          </div>
+          
+          <button type="submit">Submit</button>
+        </form>
+     </div>
+    
+    <img id="right-image" src="https://i.ibb.co/0n9XN3j/right.png" alt="">
+  </section>
+  
+</body>
+</html>
+
+<script type="text/javascript"> 
+  
+      function limitLines(obj, e) {
+      let keynum, lines = obj.value.split('\n').length;
+
+      // IE
+      if(window.event) {
+        keynum = e.keyCode;
+      // Netscape/Firefox/Opera
+      } else if(e.which) {
+        keynum = e.which;
+      }
+
+      if(keynum == 13) {
+        return false;
+      }
+    }
+
+</script>

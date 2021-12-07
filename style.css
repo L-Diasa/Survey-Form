@@ -1,0 +1,259 @@
+:root {
+    --body-color: #b0dfec;
+    --survey-box-color: #d2edf4;
+    --yellow: #FCBE1B;
+    --green: #316958;
+    --purple: #281675;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    width: 100%;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--body-color);
+  }
+  
+  header {
+    margin: 2rem 0 4rem 0;
+  }
+  
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 6rem;
+    color: var(--yellow);
+  }
+  
+  h2 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: var(--green);
+  }
+  
+  section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5% 1fr 3fr 1fr 5%;
+  }
+  
+  #left-image {
+    grid-column: 2/3;
+    margin: 30% 5% 6% auto;
+    position: sticky;
+    top: 15%;
+  }
+  
+  #right-image {
+    grid-column: 4/5;
+    margin: 30% auto 6% 5%;
+    position: sticky;
+    top: 15%;
+  }
+  
+  .survey-box {
+    grid-column: 3/4;
+    border-radius: 5rem;
+    background-color: var(--survey-box-color);
+    width: 100%;
+    padding: 10rem;
+  }
+  
+  .form {
+    display: flex; 
+    flex-direction: column;
+    font-size: 1.6rem;
+    text-align: left;
+    overflow: hidden;
+  }
+  
+  .form div {
+    position: relative;
+    margin-bottom: 5rem;
+  }
+  
+  .radio-frequency-div,
+  .checkbox-div {
+    margin-top: 2.5rem;
+  }
+  
+  .radio-security-div {
+    margin-top: 5rem;
+  }
+  
+  .textarea-div,
+  .age-div {
+    padding-top: 2.5rem;
+  }
+  
+  .input-div input {
+    width: 100%;
+    padding-top: 2rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .input-div label,
+  .textarea-div label,
+  p {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid grey;
+  }
+  
+  .textarea-div .textarea-label {
+    bottom: 5.6rem;
+  }
+  
+  p {
+    bottom: 1.1rem;
+  }
+  
+  .input-div label::after,
+  .textarea-div label::after,
+  .textarea-div p::after
+  {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid  var(--yellow);
+    transform: translateX(-101%);
+    transition: transform 0.3s ease;
+  }
+  
+  .content, .age-span {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0px;
+    transition: all 0.3s ease;
+  }
+  
+  .age-span {
+    bottom: 0.1rem;
+    color: transparent;
+    pointer-events: none;
+  }
+  
+  input, #dropdown, textarea {
+    font-size: 1.6rem;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  #dropdown {
+    margin-left: -0.4rem;
+  }
+  
+  textarea { 
+    line-height: 4.5rem;
+    overflow: auto;
+    resize: none; 
+  }
+  
+  #dropdown, textarea {
+    outline: none;
+    cursor: pointer;
+    border: 0px solid transparent;
+    background-color: transparent;
+  }
+  
+  ::placeholder {
+    color: transparent;
+  }
+  
+  input, 
+  textarea,
+  .age-div select:valid,
+  .checkbox-div [type="checkbox"]:checked + label,
+  .radio-frequency-div [type="radio"]:checked + label,
+  .radio-security-div [type="radio"]:checked + label {
+    color: var(--purple);
+    font-size: 1.666rem;
+  }
+  
+  .input-div input:focus + .input-label .content, 
+  .input-div input:valid + .input-label .content, 
+  .input-div input:not(:placeholder-shown) + .input-label .content,
+  
+   .textarea-div textarea:focus ~ .textarea-label .content,
+   .textarea-div textarea:valid ~ .textarea-label #products-span,
+  .textarea-div textarea:not(:placeholder-shown) ~ .textarea-label #comments-span,
+  
+  .age-div select:focus ~ .age-span,
+  .age-div select:valid ~ .age-span {
+    transform: translateY(-120%);
+    font-size: 1.4rem;
+    color: var(--yellow);
+  }
+  
+  .input-div input:focus + label::after,
+  .input-div input:valid + label::after,
+  .input-div input:not(:placeholder-shown) + label::after,
+  
+  .textarea-div textarea:focus ~ p::after,
+  .textarea-div textarea:focus ~ label::after, 
+  .textarea-div textarea:valid ~ #products-p::after,
+  .textarea-div textarea:valid ~ #products-label::after, 
+  .textarea-div textarea:not(:placeholder-shown) ~ #comments-p::after,
+  .textarea-div textarea:not(:placeholder-shown) ~ #comments-label::after {
+    transform: translateX(0%);
+  }
+  
+  [type="checkbox"]:checked,
+  [type="radio"]:checked {
+    filter: drop-shadow(3px 0px 2px var(--yellow));
+  }
+  
+  .checkbox-div [type="checkbox"]:checked ~ span,
+  .radio-security-div [type="radio"]:checked ~ span,
+  .radio-frequency-div [type="radio"]:checked ~ span {
+    font-size: 1.4rem;
+    color: var(--yellow);
+  }
+  
+  .checkbox-div span {
+    position: absolute;
+    bottom: 20.5rem;
+    left: 0rem;
+  }
+  
+  .radio-security-div span,
+  .radio-frequency-div span {
+    position: absolute;
+    bottom: 10.5rem;
+    left: 0rem;
+  }
+  
+  .input-checkbox, 
+  .input-radio-security,
+  .input-radio-frequency {
+    margin-right: 0.625rem;
+  }
+  
+  button {
+    font-family: 'Quicksand', sans-serif;
+    width: 50%;
+    margin: 2.5rem auto auto auto;
+    border-radius: 5rem;
+    font-size: 3rem;
+    padding: 1rem 3rem 1rem 3rem;
+    color: #FFFFFF;
+    background-color: var(--green);
+    cursor: pointer;
+  }
+  
