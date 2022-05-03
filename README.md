@@ -1,4 +1,4 @@
-# Survey_form
+# Survey Form
 
 Survey Form is a freeCodeCamp project.
 
